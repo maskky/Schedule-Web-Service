@@ -1,0 +1,4 @@
+{
+    "jwtPrivateKey": "wpm_jwtPrivateKey",
+    "db": "wpm_db"
+}
