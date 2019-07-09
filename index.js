@@ -2,7 +2,7 @@ const winston = require('winston');
 const express = require('express');
 const app = express();
 
-console.log('--------------------------------START--------------------------------');
+console.log('------------------------------------------------START------------------------------------------------');
 
 require('./startup/logging')();
 require('./startup/setup')(app);
