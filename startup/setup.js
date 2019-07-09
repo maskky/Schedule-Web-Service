@@ -1,6 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
-const helmet = require('helmet');
+// const helmet = require('helmet');
 const bodyParser= require('body-parser');
 const events = require('../routes/event.route');
 const users = require('../routes/user.route');
@@ -16,7 +16,7 @@ const fs = require('fs')
 module.exports = function(app) {
     app.use(bodyParser.urlencoded({extended: true}));
     app.use(express.json());
-    app.use(helmet());
+    // app.use(helmet());
     app.use(express.urlencoded({ extended: true }));
     app.use(express.static('public'));
     app.use(morgan('combined', {stream: fs.createWriteStream('./access.log', {flags: 'a'})}));
