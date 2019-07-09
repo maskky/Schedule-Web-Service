@@ -12,7 +12,7 @@ module.exports = function() {
     });
     winston.add(winston.transports.File, {filename: 'logFile.log'});
     winston.add(winston.transports.MongoDB, {
-        db: 'mongodb://localhost/wpm',
+        db: config.get('db'),
         level: 'error'
     });
 }
