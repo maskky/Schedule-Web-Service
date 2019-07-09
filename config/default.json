@@ -1,4 +1,4 @@
 {
-    "jwtPrivateKey": "wpm_jwtPrivateKey",
+    "jwtPrivateKey": "",
     "db": "wpm_db"
 }
