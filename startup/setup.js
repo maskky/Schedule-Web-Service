@@ -10,7 +10,7 @@ const uploadpdf = require('../routes/uploadpdf.route');
 const search = require('../routes/search.route');
 const notification = require('../routes/notification.route');
 const error = require('../middleware/error');
-const fs = require('fs')
+const fs = require('fs');
 
 module.exports = function(app) {
     app.use(bodyParser.urlencoded({extended: true}));
@@ -18,8 +18,8 @@ module.exports = function(app) {
     app.use(express.urlencoded({ extended: true }));
     app.use(express.static('public'));
     app.use(morgan('combined', {stream: fs.createWriteStream('./access.log', {flags: 'a'})}));
-    app.use('/images', express.static('/images'));
-    app.use('/documents', express.static('/documents'));
+    app.use('/images', express.static('images'));
+    app.use('/documents', express.static('documents'));
     app.use('/api/events', events);
     app.use('/api/users', users);
     app.use('/api/partners', partners);
