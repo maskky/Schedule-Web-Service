@@ -18,8 +18,8 @@ module.exports = function(app) {
     app.use(express.urlencoded({ extended: true }));
     app.use(express.static('public'));
     app.use(morgan('combined', {stream: fs.createWriteStream('./access.log', {flags: 'a'})}));
-    app.use('/images', express.static(__dirname + '/images'));
-    app.use('/documents', express.static(__dirname + '/documents'));
+    app.use('/images', express.static('/images'));
+    app.use('/documents', express.static('/documents'));
     app.use('/api/events', events);
     app.use('/api/users', users);
     app.use('/api/partners', partners);
