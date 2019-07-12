@@ -1,6 +1,10 @@
 # WPM : World Business Partnership Management
 A web-service for WPM application
 
+## Require
+  * NodeJS  v.10.x.x
+  * MongoDB v.4.x.x
+
 ## Installation
   Install dependencies
   ```
