@@ -1,8 +1,10 @@
 const winston = require('winston');
+const logo = require('asciiart-logo');
+const config = require('./package.json');
 const express = require('express');
 const app = express();
 
-console.log('------------------------------------------------START------------------------------------------------');
+console.log(logo(config).render());
 
 require('./startup/logging')();
 require('./startup/setup')(app);
