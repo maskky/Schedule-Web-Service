@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const cors = require('cors');
 const bodyParser= require('body-parser');
 const events = require('../routes/event.route');
 const users = require('../routes/user.route');
@@ -17,6 +18,7 @@ module.exports = function(app) {
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
     app.use(express.static('public'));
+    app.use(cors());
     app.use(morgan('combined', {stream: fs.createWriteStream('./access.log', {flags: 'a'})}));
     app.use('/images', express.static('images'));
     app.use('/documents', express.static('documents'));
