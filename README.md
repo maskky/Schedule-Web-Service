@@ -27,6 +27,16 @@ A web-service for WPM application
   ```
   ngrok http _port_
   ```
+
+## If error bcrypt
+  Install node-pre-gyp
+  ```
+  npm install -g node-gyp node-pre-gyp
+  ```
+  Then re-install bcrypt
+  ```
+  npm install bcrypt --unsafe-perm
+  ```
   
 ## Environments
   export / set
