@@ -54,8 +54,8 @@ function validateEvent(event){
         title: Joi.string().min(3),
         eventType: Joi.string(),
         date: Joi.date(),
-        startTime: Joi.date(),
-        endTime: Joi.date(),
+        startTime: Joi.string(),
+        endTime: Joi.string(),
         venue: Joi.string(),
         country: Joi.string(),
         kbankParticipant: Joi.array().items({
