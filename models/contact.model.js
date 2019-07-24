@@ -42,7 +42,8 @@ const Contact = mongoose.model('Contact', new mongoose.Schema({
     }],
     status: {
         type: String,
-        enum: ['active', 'inactive']
+        enum: ['active', 'inactive'],
+	default: 'active'
     },
     editedBy : {
         type: mongoose.Schema.Types.ObjectId,
