@@ -8,10 +8,6 @@ const Partner = mongoose.model('Partner', new mongoose.Schema({
         min: 3,
         lowercase: true
     },
-    priority: {
-        type: Number,
-        default: 99
-    },
     continent: String,
     country: String,
     partnerType: String,
@@ -36,7 +32,6 @@ const Partner = mongoose.model('Partner', new mongoose.Schema({
 function validatePartner(partner){
     const schema = {
         name: Joi.string().min(3),
-        priority: Joi.number(),
         continent: Joi.string(),
         country: Joi.string(),
         partnerType: Joi.string(),
