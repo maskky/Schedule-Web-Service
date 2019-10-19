@@ -1,5 +1,4 @@
-# WPM : World Business Partnership Management
-A web-service for WPM application
+A Schedule Web Service created from NodeJS + ExpressJS 
 
 ## Require
   * NodeJS  v.10.x.x
